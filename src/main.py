@@ -8,34 +8,36 @@ print("------------------------------------------------------------------------"
 nome_jogador = input(Back.LIGHTBLACK_EX + "Olá! Bem-vindo(a) ao Advinhe o numero!\nPor favor, digite seu nome: ")
 print(Back.LIGHTBLACK_EX + f"Olá, {nome_jogador}! Vamos testar suas habilidades em adivinhar números! 🎮🔮")
 print("-------------------------------------------------------------------------")
-time.sleep(1)
 
 # Função para a vez do jogador humano
 def turno_jogador(nome_jogador):
     print(Back.LIGHTWHITE_EX + f"\n====== {nome_jogador}, é a sua vez! ======")
     return int(input("Digite um número entre 1 e 100: "))
-time.sleep(2)
+
 
 def turno_computador(baixo, alto):
     print(Back.LIGHTBLACK_EX + f"\n====== Vez do Computador! ======")
     palpite_computador = (baixo + alto) // 2
     print(f"O computador está palpita: {palpite_computador}")
     return palpite_computador
-time.sleep(3)
+
 
 # Função para exibir as suposições do jogador
 def exibir_suposicoes(jogador, suposicoes):
-    print(Back.LIGHTCYAN_EX + f"Suposições do(a) {jogador}: {suposicoes}")
+    print(Back.LIGHTBLACK_EX + f"Suposições do(a) {jogador}: {suposicoes}")
 
     # Função para verificar o vencedor do jogo
 def verificar_vencedor(nome_jogador, numero_secreto, palpite, suposicoes):
     if palpite == numero_secreto:
         print(f"\nParabéns, {nome_jogador}! Você acertou! O número era: {numero_secreto}\n")
+        time.sleep(0.5)
         return True
     elif palpite < numero_secreto:
-        print(f"{nome_jogador}, seu palpite é menor . Tente novamente!")
+        print(f"{nome_jogador}, seu palpite é menor que o numero secreto. Tente novamente!")
+        time.sleep(0.5)
     else:
         print(f"{nome_jogador}, seu palpite é maior que o numero secreto. Tente novamente!")
+        time.sleep(0.5)
     suposicoes.append(palpite)
     return False
 
