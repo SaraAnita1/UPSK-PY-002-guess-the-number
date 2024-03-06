@@ -73,10 +73,10 @@ while True:
 
     # Finalizar o jogo
     if not jogar_novamente():
-        print("\n")
+        print("\n-----------------------------------------------------------------------")
         print(f" Obrigado por jogar, {nome_jogador}! Esperamos que tenha se divertido. ")
-        print(" Até a próxima!   ◖ᵔᴥᵔ◗ ♪ ♫    (｡◕‿◕｡)                            ")
-        print("")
+        print(" Até a próxima!    ｡◕‿◕｡     🔮🎲🎮                      ")
+        print("-----------------------------------------------------------------------")
         break
 # def jogar_adivinhacao():
 #     numero_secreto = random.randint(0, 100)
