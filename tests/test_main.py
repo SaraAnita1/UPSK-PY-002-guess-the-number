@@ -1,5 +1,4 @@
-import sys
-sys.path.insert(0, '../src/main.py')
+from main import turno_jogador
 
 
 def test_turno_jogador_return_input_number():
