@@ -3,6 +3,9 @@ import random
 import time
 from colorama import  Back
 
+# if__name__=="__main__":
+
+
 # Saudação e entrada do nome do jogador
 print("------------------------------------------------------------------------")
 nome_jogador = input(Back.LIGHTBLACK_EX + "Olá! Bem-vindo(a) ao Advinhe o numero!\nPor favor, digite seu nome: ")
@@ -44,6 +47,7 @@ def verificar_vencedor(nome_jogador, numero_secreto, palpite, suposicoes):
 # Função para jogar novamente
 def jogar_novamente():
     return input("\nGostaria de jogar novamente? (s/n): ").lower() == 's'
+
 
 while True:
     numero_secreto = random.randint(1, 100)
